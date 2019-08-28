@@ -60,7 +60,7 @@ void initialization(){
 
 // To create a new node
 void create(){
-	system("cls");
+	//system("cls");
 	int f = 0, Eid;
 	Employee *newEmployee = (Employee*)malloc(sizeof( Employee));
 	Employee *tempHead = ( Employee*)malloc(sizeof( Employee));
@@ -243,7 +243,7 @@ void fileStore(int Eid){
     tempHead = empHead->Next;
     while(tempHead != NULL){
 	    if(tempHead->Eid == Eid){       // If Employee ID is matched, showing the Employee record
-	        fprintf(file,"%d %s %s",tempHead->Eid,tempHead->Name,tempHead->Email);
+	        fprintf(file,"%d %s %s \n",tempHead->Eid,tempHead->Name,tempHead->Email);
 	        system("cls");
 	        //printf("\n\t %d",tempHead->Eid);
 	        //printf("\n\t %s",tempHead->Name);
@@ -258,7 +258,7 @@ void fileStore(int Eid){
 
 int main()
 {
-	/*
+	
 	 int i = 0;
     if(fileOpen()){
         initialization();
@@ -284,11 +284,15 @@ int main()
         	}
         	getchar();
         }
-        	*/
+    }
+    /*
+    fileOpen();
 	initialization();
 	create();
 	create();
 	create();
+	displayAll();
+	*/
 	return 0;
 }
  
